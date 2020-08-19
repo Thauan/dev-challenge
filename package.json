@@ -1,0 +1,36 @@
+{
+  "name": "dev-challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/facile-tech/dev-challenge.git",
+  "author": "Thauan Almeida <thaubr28@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev src/server.ts",
+    "db:make": "./node_modules/.bin/knex --knexfile src/database/knexfile.ts migrate:make",
+    "db:migrate": "./node_modules/.bin/knex --knexfile src/database/knexfile.ts migrate:latest",
+    "db:rollback": "./node_modules/.bin/knex --knexfile src/database/knexfile.ts migrate:rollback"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
+    "@types/body-parser": "^1.17.0",
+    "@types/cors": "^2.8.5",
+    "@types/express": "^4.17.7",
+    "@types/jsonwebtoken": "^8.3.2",
+    "ts-node-dev": "^1.0.0-pre.57",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "dotenv-safe": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.21.5",
+    "moment": "^2.27.0",
+    "pg": "^7.9.0",
+    "sqlite3": "^5.0.0"
+  }
+}
